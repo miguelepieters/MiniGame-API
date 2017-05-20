@@ -21,13 +21,16 @@ if (DEBUG) {
     ini_set("display_errors", 0);
 }
 
+$mysqli = NULL;
 
-$mysqli = new mysqli(
-    $config["sql"]["host"],
-   	$config["sql"]["username"],
-   	$config["sql"]["password"],
-    $config["sql"]["dbname"]
-);
+if ($mysqli  == NULL) {
+	$mysqli = new mysqli(
+		$config["sql"]["host"],
+		$config["sql"]["username"],
+		$config["sql"]["password"],
+		$config["sql"]["dbname"]
+	);
+}
 
 require "$appPath/classes/class.config.php";
 require "$appPath/classes/class.cache.php";
