@@ -79,9 +79,9 @@ class config
         $configExist = $this->configExist($option, $plugin);
         /* Update or Insert new config? */
         if ($configExist)
-            $query = "UPDATE BlueStats_config SET `value`=? WHERE `server_id`=? and `plugin`=? AND `option`=?";
+            $query = "TODO";
         else
-            $query = "INSERT INTO BlueStats_config (`server_id`, `option`, `plugin`, `value`) VALUES (?, ?, ?, ?)";
+            $query = "TODO";
         if ($stmt->prepare($query)) {
             if ($configExist)
                 $stmt->bind_param("siss", $value, $this->serverId, $plugin, $option);
@@ -104,7 +104,7 @@ class config
             $plugin = $this->pluginName;
         $mysqli = $this->MiniGameMYSQLI;
         $stmt = $mysqli->stmt_init();
-        $query = "SELECT value FROM BlueStats_config WHERE `server_id`=? and `plugin`=? AND `option`=?";
+        $query = "TODO";
         if ($stmt->prepare($query)) {
             $stmt->bind_param("iss", $this->serverId, $plugin, $option);
             $stmt->execute();
