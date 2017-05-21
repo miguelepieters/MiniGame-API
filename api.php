@@ -1,9 +1,11 @@
 <?php 
 
+header('Content-Type: application/json');
+
 $appPath = __DIR__;
 $config = json_decode(file_get_contents("$appPath/config.json"), true);
 
-define('DEBUG', true);
+define('DEBUG', false);
 define('SERVER_IP', $config["server"]["ip"]);
 define('PORT', $config["server"]["port"]);
 
