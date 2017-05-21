@@ -1,7 +1,7 @@
 <?php
 
 class Server {
-	
+
 	private $mysqli = NULL;
 	private $funcs = NULL;
 	
@@ -35,5 +35,3 @@ class Server {
 		return $this->funcs->getAllAchievements();
 	}
 }
-
-?>	
